@@ -33,12 +33,14 @@ function createCircle(showPrompt)
         {
             attempts++
 
+            var imgContainer = document.querySelector("#imageContainer");
+            imgContainer.innerHTML = ""; 
+
             if (element.innerText == randomNumber) 
             {
                 element.style.backgroundColor = "green";
                 alert("Congratulations! You have won the game");
 
-                var imgContainer = document.querySelector("#imageContainer"); 
                 var img = document.createElement("img");
                 img.src = "download.jpg";  
                 img.alt = "Correct";
@@ -58,8 +60,8 @@ function createCircle(showPrompt)
                 var img = document.createElement("img");
                 img.src = "wrong.gif";  
                 img.alt = "Wrong";
-                img.style.width = "100px"; 
-                img.style.height = "10  0px";
+                img.style.width = "200px"; 
+                img.style.height = "200px";
                 imgContainer.appendChild(img);  
 
             } 

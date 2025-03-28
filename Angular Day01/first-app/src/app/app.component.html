@@ -1,0 +1,74 @@
+<h1>Hello {{title}}</h1>
+<h3>Hi {{name}}</h3>
+<h2>{{getName()}}</h2>
+<a [href]="link" target="_blank">Click me</a>
+<img [src]="image" alt="">
+<br><br>
+<button [disabled]="disabled">Click me</button>
+
+<h3>{{data}}</h3>
+<button (click)="incrementData()">Increment</button>
+<button (click)="decrementData()">Decrement</button>
+
+<div>
+    <h1 [hidden]="hidden">This is Angular Batch</h1>
+</div>
+
+<input type="text" (keyup.enter)="onClick(box.value)" #box>
+<p *ngIf="hidden">{{result}}</p>
+
+<div *ngFor="let player of players">
+    <p>{{player.id}} {{player.name}} {{player.email}}</p>
+
+</div>
+
+<h1>ToDo App</h1>
+
+<div>
+    <input type="text" placeholder="Enter Task" (keyup.enter)="addTask(task.value)" #task>
+    <!-- <button (click)="addTask(task.value)">Add Task</button> -->
+</div>
+
+<div>
+    <h3>Added Task</h3>
+    <div *ngFor="let task of tasks">
+        <li>{{task}}
+            <button (click)="taskComplete(task)">Check</button> &nbsp;
+            <button (click)="taskDelete(task)">Delete</button>
+        </li>
+        
+    </div>
+</div>
+
+<div>
+    <h3>Checked Tasks</h3>
+    <div *ngFor="let compTask of completedTasks">
+        <li>{{compTask}}
+            <button (click)="deleteFromCompleted(compTask)">Delete</button>
+        </li>
+    </div>
+</div>
+
+<!-- <div>
+    <p *ngIf = "displayData; then firstTask; else secondTask"></p>
+</div> -->
+
+<!-- <ng-template #firstTask>
+    First Task
+</ng-template>
+
+<ng-template #secondTask>
+    Second Task
+</ng-template> -->
+
+<div #firstTask>
+    <p>This is the First Task</p>
+</div>
+
+<div #secondTask>
+    Second Task
+</div>
+<!-- 
+<div>
+    {{message}}
+</div> -->
