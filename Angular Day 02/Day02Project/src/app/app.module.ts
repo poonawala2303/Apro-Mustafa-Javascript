@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { FilterComponent } from './filter/filter.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CoursesComponent,
-    FilterComponent
+    FilterComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -66,9 +66,37 @@ export class AppComponent {
     return this.totalCourse
   }
 
-  sendData(data:any){
+  sendData(data:any)
+  {
     console.log(data)
 
   }
 
+  firstFunction(inpu1:HTMLInputElement)
+  {
+    console.log(inpu1.value)
+  }
+
+  @ViewChild('secondReference') secondRef!:ElementRef;
+  secondFunction()
+  {
+    console.log(this.secondRef.nativeElement.value)
+  }
+
+  age:number = 0;
+  dateFunction(date:HTMLInputElement)
+  {
+    this.age = new Date().getFullYear() - new Date(date.value).getFullYear()
+    
+    if(new Date(date.value).getFullYear() > new Date().getFullYear())
+    {
+      alert("Please enter valid date")
+    }
+    if(new Date().getMonth() < new Date(date.value).getMonth())
+    {
+      this.age--;
+    }
+
+    console.log(this.age)
+  }
 }

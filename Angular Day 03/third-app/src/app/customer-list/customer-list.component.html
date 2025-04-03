@@ -1,0 +1,25 @@
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody *ngFor="let customer of customers">
+        <tr>
+            <td>{{ customer.customerNo }}</td>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.address }}</td>
+            <td>{{ customer.city }}</td>
+            <td>{{ customer.country }}</td>
+            <td><button (click)="showName(customer)">Show Name</button></td>
+        <tr>
+    </tbody>
+</table>
+<!-- {{nameOf}} -->
+ {{paraVar}}

@@ -1,4 +1,10 @@
-<p>courses works!</p>
+<!-- <p>courses works!</p>
 <p>Paid Course Count : {{paidCourse}}</p>
 <p>Free Course Count : {{freeCourse}}</p>
-<p>Total Course Count : {{totalCourse}}</p>
+<p>Total Course Count : {{totalCourse}}</p> -->
+
+<app-filter (eventToParentFromChild) = getType($event)></app-filter>
+<app-search (eventToParentFromChild) = getText($event)></app-search>
+<div *ngFor="let course of filterCourses">
+    <div>{{course.name}}</div>
+</div>

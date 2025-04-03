@@ -8,3 +8,13 @@
 <h1>Show data</h1>
 <input (input) = "display()" type="text" [(ngModel)]="data">
 <p>{{data}}</p> 
+
+<input type="text" name="" id="" #firstReference>
+<button (click)="firstFunction(firstReference)">First</button>
+
+<input type="text" name="" id="" #secondReference>
+<button (click)="secondFunction()">Second</button>
+
+<input type="date" name="" id="" #firstRefereneceDate>
+<button (click)="dateFunction(firstRefereneceDate)">Get Age</button>
+<p>Age: {{age}}</p>

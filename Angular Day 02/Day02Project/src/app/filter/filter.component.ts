@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input , Output , EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './filter.component.css'
 })
 export class FilterComponent {
+  type = "All";
 
+  @Output() eventToParentFromChild:EventEmitter<string> = new EventEmitter<string>();
+
+  sendType()
+  {
+    this.eventToParentFromChild.emit(this.type);
+  }
+  
 }
